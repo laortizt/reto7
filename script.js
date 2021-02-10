@@ -1,20 +1,22 @@
-const textEl = document.getElementById('')
+const textEl = document.getElementById('text') /*se agrega text */ 
+const speedEl = document.getElementById('speed') /*se agrega speedEL*/ 
+const text = 'We Love Programming!'  /*aqui */ 
 let idx = 1
-let speed =  / speedEl.value
+let speed = 300 / speedEl.value /*se agrega 300*/ 
 
 writeText()
 
-funtion writeText{
-    textEl.innerText =
-
+function writeText(){
+    textEl.innerText  = text.slice(0, idx)  /*se agrega text.slice(0, idx) */ 
     idx++
 
-    if(idx > text.) {
+    /*se agrega .length */  
+    if(idx > text.length) { 
         idx = 1
     }
 
-    setTimeout()
+    setTimeout(writeText, speed) /*writeText, speed */ 
 }
 
-
-speedEl.addEventListener('', (e) => speed =  / )
+/*aqui*/ 
+speedEl.addEventListener('input', (e) => speed = 300 / e.target.value)
